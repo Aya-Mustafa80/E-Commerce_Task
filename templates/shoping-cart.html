@@ -251,6 +251,19 @@
                       </div>
                     </td>
                     <td class="column-5">${{prod.price}}</td>
+                    <td>
+                      <a href="/Cartdel/{{prod.id}}/">
+                        <img
+                          src="{% static 'images/error.png' %}"
+                          alt=""
+                          style="
+                            margin-bottom: 100px;
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 10px;
+                          "
+                      /></a>
+                    </td>
                   </tr>
                   {%endfor%}
                 </table>

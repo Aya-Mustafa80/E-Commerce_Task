@@ -60,5 +60,11 @@ def cart(request,pID):
     return render(request,'product-detail.html',{'Product':Product,'count':count})
 
 
-
+def Cartdel(request,CID):
+    Product=Products.objects.get(id=CID)
+    Product.orderd=False
+    Product.save()
+    Pro=Products.objects.filter(orderd=True)
+    count=Pro.count
+    return render(request,'shoping-cart.html',{'Products':Pro,'count':count})
 
